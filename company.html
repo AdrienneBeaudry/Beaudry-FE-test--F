@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Registration</h2>
+
+    <h3>Step 2: Add Company</h3>
+
+    <div class="input-field col s6">
+        <select name="company-list" form="company">
+            <option value="" disabled selected>Choose company from the list</option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+        </select>
+    </div>
+
+    <form action="new-company.php" method="post" id="company">
+        <h6>Or add new:</h6>
+        <div class="input-field col s6">
+            <input name="company" placeholder="Company Name" type="text" class="validate">
+        </div>
+
+        <input type="submit" value="Submit" class="waves-effect waves-light btn">
+    </form>
+
+
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+</script>
+
+</body>
+</html>
