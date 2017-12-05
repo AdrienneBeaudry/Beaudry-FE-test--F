@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-wrapper white">
+        <h5 class="brand-logo hide-on-med-and-down right">Adrienne Beaudry</h5>
+        <ul id="nav-mobile">
+            <li><a href="index.html"><h5>View 1</h5></a></li>
+            <li><a href="company.html"><h5>View 2</h5></a></li>
+            <li class="active"><a href="#"><h5>View 3</h5></a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h3>Individuals not associated with a company</h3>
+
+</div>
+
+<div>
+<div class="row">
+    <form action="helpers/set-company.php" method="post" id="assign-company-form">
+
+    <div class="col m3 offset-m2">
+        <h5>Select a Person:</h5>
+        <div id="individuals-container">
+
+
+        </div>
+
+    </div>
+
+    <div class="col m3">
+        <h5>Assign a Company:</h5>
+        <div id="companies-container" >
+
+        </div>
+    </div>
+
+    <div class="col m3">
+        <br>
+        <br>
+        <button type="submit" id="assign-company" class="waves-effect waves-light btn">Submit</button>
+        <span id="result"></span>
+    </div>
+    </form>
+</div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/individuals.js"></script>
+
+</body>
+</html>

@@ -3,17 +3,28 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
+<nav>
+    <div class="nav-wrapper white">
+        <h5 class="brand-logo hide-on-med-and-down right">Adrienne Beaudry</h5>
+        <ul id="nav-mobile">
+            <li class="active"><a href="#"><h5>View 1</h5></a></li>
+            <li><a href="company.html"><h5>View 2</h5></a></li>
+            <li><a href="individuals.html"><h5>View 3</h5></a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
 
-    <h2>Registration</h2>
 
-    <h3>Step 1</h3>
+    <h3>Add New Person</h3>
 
-    <form action="new-person.php" method="post">
+    <form action="helpers/new-person.php" method="post">
         <div class="input-field col s6">
             <input type="text" placeholder="Full Name" name="full_name" class="validate">
         </div>

@@ -3,45 +3,75 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
+<nav>
+    <div class="nav-wrapper white">
+        <h5 class="brand-logo hide-on-med-and-down right" id="test">Adrienne Beaudry</h5>
+        <ul id="nav-mobile">
+            <li><a href="index.html"><h5>View 1</h5></a></li>
+            <li class="active"><a href="#"><h5>View 2</h5></a></li>
+            <li><a href="individuals.html"><h5>View 3</h5></a></li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
 
-    <h2>Registration</h2>
 
-    <h3>Step 2: Add Company</h3>
+    <h3>Companies & Related Employees</h3>
 
-    <div class="input-field col s6">
-        <select name="company-list" form="company">
-            <option value="" disabled selected>Choose company from the list</option>
-            <option value="1"></option>
-            <option value="2"></option>
-            <option value="3"></option>
-        </select>
-    </div>
+    <form action="helpers/new-company.php" method="post" id="add-company-form">
 
-    <form action="new-company.php" method="post" id="company">
-        <h6>Or add new:</h6>
+        <h6>Add new:</h6>
         <div class="input-field col s6">
-            <input name="company" placeholder="Company Name" type="text" class="validate">
+            <input id="company-input" name="company" placeholder="Company Name" type="text">
         </div>
 
-        <input type="submit" value="Submit" class="waves-effect waves-light btn">
+        <button type="submit" id="add-company-btn" value="Submit" class="waves-effect waves-light btn">Submit</button>
+        <span id="result"></span>
     </form>
+    <br>
+    <br>
+    <h5>Select a Company:</h5>
 
 
+
+            <form method="post" action="helpers/get-employees.php" id="fetch-employees-form">
+
+                <div name="company-list" onchange="" id="selectCompany"></div>
+
+            </form>
+
+
+
+            <button type="submit" value="List Employees" id="fetch-employees" class="waves-effect waves-light btn">List Employees</button>
+
+
+            <div id="employeeHeader"></div>
+            <div id="employeeContainer"></div>
+            <div id="result2"></div>
+
+
+    <div id="next-step" class="right-align">
+            <a href="individuals.html" >
+                <button class="waves-effect waves-light btn-large" id="continue">Continue</button>
+            </a>
+    </div>
+
+    </div>
 </div>
 
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('select').material_select();
-    });
-</script>
+<script type="text/javascript" src="js/company.js"></script>
+
 
 </body>
 </html>

@@ -1,0 +1,43 @@
+i.material-icons {
+    padding-left: 5px;
+    color: red;
+    font-weight: bolder;
+    vertical-align: -10%;
+}
+
+#next-step {
+    padding-top: 50px;
+}
+
+nav h5 {
+color: #009688;
+}
+
+nav .brand-logo {
+    color: black;
+    padding-right: 15% !important;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+nav {
+    height: 49px;
+}
+
+#nav-mobile {
+    padding-left: 15%;
+}
+
+#continue {
+    margin-bottom: 70px;
+}
+
+#fetch-employees {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+    border: 2px solid red;
+    background-color: red;
+}
